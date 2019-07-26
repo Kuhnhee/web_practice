@@ -1,0 +1,26 @@
+h2{
+    text-align: center;
+}
+h2, h4{
+    margin:0px;
+}
+.tab{
+    width:600px; 
+    margin:0px auto; /*가운대 정렬*/
+}
+.tabmenu{
+    background-color:royalblue;
+}
+.tabmenu > div {
+    display: inline-block;
+    /* float:left; */
+    width:144px;
+    text-align: center;
+    height:50px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.content{
+    padding:5%;
+    background-color: antiquewhite;
+}
