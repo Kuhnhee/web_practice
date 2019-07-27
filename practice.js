@@ -43,6 +43,6 @@ console.log(answer)
 
 
 
-// return of the code below is "true"
+// return of the code below is "true".
 var a = 1;
 console.log(typeof a === "number");
