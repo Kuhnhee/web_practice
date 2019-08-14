@@ -10,15 +10,37 @@ var healthObj = {
 healthObj.showHealth();
 
 var todo = {
-    data : [],
+    todos : ["자바스크립트공부하기"],
     addTodo: function(v){
-        this.data.push(v);
+        this.todos.push(v);
     },
     showTodo: function(){
-        console.log(this.data)
+        console.log(this.todos)
     }
+}
+
+var tester = {
+    name: "아직 바뀌기 전 이름",
+    showMe() {
+        console.log(this.name);
+        return this.name;
+    },
+    setName(name){
+        console.log(this.name);
+        // return this.name = name;
+        this.name = name;
+    }
+}
+
+var others = {
+    todos: "난 절대 아무것도 하지 않아"
 }
 
 todo.addTodo("some");
 todo.addTodo("help")
 todo.showTodo();
+
+tester.setName("김밥");
+tester.showMe();
+
+todo.showTodo.call(others); //call 함수는 현재 context의 참조점을 바꿔준다.
