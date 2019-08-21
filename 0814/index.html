@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,36 @@
 
   <script src='./js/4-2-1.js'></script>
 
-  
+  <style>
+  </style>
 </head>
+
 <body>
   <h1>prj4-2</h1>
+  <h1>template using handlebar</h1>
+  <section class="show">
+
+
+  </section>
+
+  <script type="myTemplate" id="listTemplate">
+    <li>
+       <div>게시자 : {{name}}</div>
+       <div class="content">{{content}}</div>
+       <div>좋아요 갯수 <span> {{like}} </span></div>
+       <div class="comment">
+         <div>{{comment}}</div>
+       </div>
+    </li>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"
+    integrity="sha256-ngJY93C4H39YbmrWhnLzSyiepRuQDVKDNCWO2iyMzFw=" crossorigin="anonymous"></script>
+  <script>
+    var template = document.querySelector("#listTemplate").innerText;
+    var bindTemplate = Handlebars.compile(template);  //bindTemplate은 메서드입니다.
+    console.log(bindTemplate);
+  </script>
+
 </body>
+
 </html>
